@@ -5,9 +5,9 @@ import numpy as np
 import tensorflow as tf
 import os
 
-#  Load class names
 
-train_dir = r"C:\Users\Prash\OneDrive\Documents\Projects\PLANT DISEASE DETECTION\dataset\color"
+
+train_dir = r"ENTER YOUR PATH HERE\dataset\color"
 CLASS_NAMES = sorted(os.listdir(train_dir))
 
 # disease knowledge user database
@@ -26,7 +26,7 @@ RECOMMENDATIONS = {
 
 # ⚙️ Load model once
 
-MODEL_PATH = r"C:\Users\Prash\OneDrive\Documents\Projects\PLANT DISEASE DETECTION\plant_disease_prediction_model.h5"
+MODEL_PATH = r"ENTER YOUR PATH HERE\plant_disease_prediction_model.h5"
 print(" Loading model kindly wait ")
 model = tf.keras.models.load_model(MODEL_PATH)
 print("Model fetched sucessfully")
@@ -108,7 +108,7 @@ class LeafDiseaseApp:
 
         self.result_label.config(text=result_text)
         self.recommendation_label.config(text=f" Recommendation:\n{recommendation}")
-# 🚀 Run the app
+#  Run the app
 
 if __name__ == "__main__":
     root = tk.Tk()
